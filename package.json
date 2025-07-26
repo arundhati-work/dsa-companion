@@ -1,0 +1,21 @@
+{
+  "name": "dsa-companion",
+  "version": "1.0.0",
+  "description": "An AI-powered DSA learning companion that generates problems, provides hints, and guides users through solutions",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "start": "cd server && npm start",
+    "setup-env": "echo 'Setting up environment files...' && cp env.example server/.env && echo 'SERVER_PORT=5000' >> server/.env && echo 'CLIENT_PORT=3000' >> server/.env && echo 'REACT_APP_SERVER_PORT=5000' > client/.env && echo 'REACT_APP_CLIENT_PORT=3000' >> client/.env"
+  },
+  "keywords": ["dsa", "algorithms", "data-structures", "learning", "ai"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 
